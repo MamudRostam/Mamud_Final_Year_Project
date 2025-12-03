@@ -70,8 +70,7 @@ Game prototype
 * Completed the CMP/DIG6200 Interim Project Report on the 3rd November 2025.
 
 # Gantt Chart 
-
-![Gantt Chart](C:\Users\mamud\Documents\GitHub\Mamud_Final_Year_Project\Interim Progress Review (Due in 13 days))
+![Gantt Chart](GanttChart.png)
 
 # Dependencies
 * Unity 3D
