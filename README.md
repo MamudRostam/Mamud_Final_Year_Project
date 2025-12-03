@@ -71,7 +71,7 @@ Game prototype
 
 # Gantt Chart 
 
-[Gantt Chart screenshot of my milestones]{GanttChart.png}
+![Gantt Chart](C:\Users\mamud\Documents\GitHub\Mamud_Final_Year_Project\Interim Progress Review (Due in 13 days))
 
 # Dependencies
 * Unity 3D
