@@ -69,6 +69,10 @@ Game prototype
 
 * Completed the CMP/DIG6200 Interim Project Report on the 3rd November 2025.
 
+# Gantt Chart 
+
+[Gantt Chart screenshot of my milestones]{GanttChart.png}
+
 # Dependencies
 * Unity 3D
 
