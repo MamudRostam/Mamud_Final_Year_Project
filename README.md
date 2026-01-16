@@ -72,6 +72,12 @@ Game prototype
 # Gantt Chart 
 ![Gantt Chart](GanttChart.png)
 
+# Features
+
+* Grid Shader (Capture the effect of Neon and Tron effect)
+
+
+
 # Dependencies
 * Unity 3D
 
