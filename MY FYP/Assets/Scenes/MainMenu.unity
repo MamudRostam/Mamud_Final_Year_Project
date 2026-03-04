@@ -390,7 +390,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 52eeb9d71312eed4d9516a31e68ed2ad, type: 3}
+    m_Font: {fileID: 12800000, guid: 33a6a5952cb707f478ae5ba98cccf206, type: 3}
     m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
@@ -543,6 +543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8115715899a4694bb1849d9c0b70b37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pausemenuPanel: {fileID: 0}
 --- !u!1 &724482444
 GameObject:
   m_ObjectHideFlags: 0
@@ -984,12 +985,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 52eeb9d71312eed4d9516a31e68ed2ad, type: 3}
+    m_Font: {fileID: 12800000, guid: 33a6a5952cb707f478ae5ba98cccf206, type: 3}
     m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
-    m_MaxSize: 40
+    m_MinSize: 0
+    m_MaxSize: 150
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1031,6 +1032,7 @@ GameObject:
   - component: {fileID: 1619229512}
   - component: {fileID: 1619229514}
   - component: {fileID: 1619229513}
+  - component: {fileID: 1619229515}
   m_Layer: 5
   m_Name: TITLE
   m_TagString: Untagged
@@ -1078,7 +1080,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 52eeb9d71312eed4d9516a31e68ed2ad, type: 3}
+    m_Font: {fileID: 12800000, guid: 33a6a5952cb707f478ae5ba98cccf206, type: 3}
     m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
@@ -1099,6 +1101,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1619229511}
   m_CullTransparentMesh: 1
+--- !u!114 &1619229515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619229511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &2086971628
 GameObject:
   m_ObjectHideFlags: 0
