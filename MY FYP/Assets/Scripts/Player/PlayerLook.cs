@@ -11,6 +11,7 @@ public class PlayerLook : MonoBehaviour
 
     public void ProcessLook(Vector2 input)
     {
+        if (Time.timeScale == 0f) return;
         float mouseX = input.x;
         float mouseY = input.y;
 
