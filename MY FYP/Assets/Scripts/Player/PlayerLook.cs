@@ -9,6 +9,17 @@ public class PlayerLook : MonoBehaviour
     public float xSensitivty = 30f;
     public float ySensitivity = 30f;
 
+    void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
+        xRotation = cam.transform.localEulerAngles.x;
+
+        if (xRotation > 180f)
+            xRotation = 360;
+    }
+
     public void ProcessLook(Vector2 input)
     {
         if (Time.timeScale == 0f) return;

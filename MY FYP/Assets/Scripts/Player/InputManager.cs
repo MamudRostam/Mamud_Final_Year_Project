@@ -20,7 +20,7 @@ public class InputManager : MonoBehaviour
         onFoot.Jump.performed += ctx => motor.Jump();
     }
 
-    void FixedUpdate()
+    void Update()
     {
         motor.ProcessMove(onFoot.Movement.ReadValue<Vector2>());
     }
