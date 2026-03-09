@@ -9,6 +9,10 @@ public class PicoMPUController : MonoBehaviour
     float pitch;
     int fire;
 
+    // Adjust these to control sensitivity
+    public float yawSensitivity = 2.0f;   // left/right
+    public float pitchSensitivity = 2.0f; // up/down
+
     void Start()
     {
         try
@@ -35,7 +39,6 @@ public class PicoMPUController : MonoBehaviour
                 {
                     string data = serial.ReadLine();
                     ParseData(data);
-                    Debug.Log(data);
                 }
             }
             catch
@@ -44,7 +47,12 @@ public class PicoMPUController : MonoBehaviour
             }
         }
 
-        transform.localRotation = Quaternion.Euler(pitch, transform.localEulerAngles.y, 0);
+        // Apply sensitivity
+        float clampedPitch = Mathf.Clamp(-pitch * pitchSensitivity, -80f, 80f);
+        float adjustedYaw = -yaw * yawSensitivity;
+
+        transform.localRotation =
+            Quaternion.Euler(clampedPitch, adjustedYaw, 0);
     }
 
     void ParseData(string data)
