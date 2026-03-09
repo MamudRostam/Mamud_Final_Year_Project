@@ -1,6 +1,7 @@
 using Unity.Hierarchy;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class EnemyAI : MonoBehaviour
     public LayerMask whatIsGround, whatIsPlayer;
 
     public float health;
+    
+    Animator animator;
 
 
     //Patrolling
@@ -31,6 +34,8 @@ public class EnemyAI : MonoBehaviour
     {
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
+
     }
 
     private void Update()
@@ -43,6 +48,7 @@ public class EnemyAI : MonoBehaviour
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();
         if (playerInSightRange && playerInAttackRange) AttackPlayer();
 
+        animator.SetFloat("Speed", agent.remainingDistance > agent.stoppingDistance ? 1f : 0f);
 
     }
 
