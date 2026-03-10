@@ -9,23 +9,32 @@ public class PicoMPUController : MonoBehaviour
     float pitch;
     int fire;
 
-    // Adjust these to control sensitivity
-    public float yawSensitivity = 2.0f;   // left/right
-    public float pitchSensitivity = 2.0f; // up/down
+    public float sensitivity = 1.5f;   // adjust in inspector
 
     void Start()
     {
-        try
-        {
-            serial = new SerialPort("COM3", 115200);
-            serial.ReadTimeout = 1;
-            serial.Open();
+        string[] ports = SerialPort.GetPortNames();
 
-            Debug.Log("Serial connected");
-        }
-        catch
+        foreach (string port in ports)
         {
-            Debug.Log("Serial failed");
+            try
+            {
+                serial = new SerialPort(port, 115200);
+                serial.ReadTimeout = 1;
+                serial.Open();
+
+                Debug.Log("Connected to " + port);
+                break;
+            }
+            catch
+            {
+                Debug.Log("Failed on " + port);
+            }
+        }
+
+        if (serial == null || !serial.IsOpen)
+        {
+            Debug.Log("No serial ports connected");
         }
     }
 
@@ -41,18 +50,15 @@ public class PicoMPUController : MonoBehaviour
                     ParseData(data);
                 }
             }
-            catch
-            {
-                // ignore errors
-            }
+            catch { }
         }
 
-        // Apply sensitivity
-        float clampedPitch = Mathf.Clamp(-pitch * pitchSensitivity, -80f, 80f);
-        float adjustedYaw = -yaw * yawSensitivity;
+        // Small drift deadzone
+        if (Mathf.Abs(yaw) < 0.15f) yaw = 0;
+        if (Mathf.Abs(pitch) < 0.15f) pitch = 0;
 
         transform.localRotation =
-            Quaternion.Euler(clampedPitch, adjustedYaw, 0);
+            Quaternion.Euler(-pitch * sensitivity, -yaw * sensitivity, 0);
     }
 
     void ParseData(string data)
@@ -64,9 +70,6 @@ public class PicoMPUController : MonoBehaviour
             float.TryParse(values[0], out yaw);
             float.TryParse(values[1], out pitch);
             int.TryParse(values[2], out fire);
-
-            if (fire == 1)
-                Debug.Log("FIRE!");
         }
     }
 
