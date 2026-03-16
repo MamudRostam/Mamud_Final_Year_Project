@@ -2373,19 +2373,6 @@ MonoBehaviour:
   chipSpeed: 2
   frontHealthBar: {fileID: 477553776}
   backHealthBar: {fileID: 1547162157}
---- !u!114 &677213068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 677213051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c4e07dc8ee46e74485236143aae19b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sensitivity: 1.5
 --- !u!1 &686364350
 GameObject:
   m_ObjectHideFlags: 0
@@ -6164,9 +6151,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2520091252297627428, guid: f199b22a913f20e469a47d846b729dc4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 677213052}
-    - targetCorrespondingSourceObject: {fileID: 2520091252297627428, guid: f199b22a913f20e469a47d846b729dc4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 677213068}
   m_SourcePrefab: {fileID: 100100000, guid: f199b22a913f20e469a47d846b729dc4, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
