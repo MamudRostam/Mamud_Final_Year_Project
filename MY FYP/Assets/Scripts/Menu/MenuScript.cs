@@ -3,9 +3,16 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuScript : MonoBehaviour
 {
+
+
+    public GameObject selectionWindowPanel;
+
     public void StartGame()
     {
-        SceneManager.LoadScene("SelectionWindow");
+        if (selectionWindowPanel != null)
+        {
+            selectionWindowPanel.SetActive(true);
+        }
     }
 
     public void TrainingRoom()
@@ -21,5 +28,10 @@ public class MainMenuScript : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void CloseSelection()
+    {
+        selectionWindowPanel.SetActive(false);
     }
 }
