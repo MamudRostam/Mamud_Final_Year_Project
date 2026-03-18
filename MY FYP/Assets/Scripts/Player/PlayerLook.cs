@@ -20,17 +20,22 @@ public class PlayerLook : MonoBehaviour
             xRotation = 360;
     }
 
+
+
     public void ProcessLook(Vector2 input)
     {
+
         if (Time.timeScale == 0f) return;
+
         float mouseX = input.x;
         float mouseY = input.y;
 
-        xRotation -= (mouseY * Time.deltaTime) * ySensitivity;
-        xRotation = Mathf.Clamp(xRotation, -80f, 80f);
 
-        cam.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-
-        transform.Rotate(Vector3.up * (mouseX * Time.deltaTime) * xSensitivty);
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            xRotation = 0f;
+            cam.transform.localRotation = Quaternion.Euler(0, 0, 0);
+            transform.rotation = Quaternion.Euler(0, transform.eulerAngles.y, 0);
+        }
     }
 }
