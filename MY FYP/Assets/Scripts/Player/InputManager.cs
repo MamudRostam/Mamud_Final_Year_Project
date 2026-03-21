@@ -14,8 +14,10 @@ public class InputManager : MonoBehaviour
         onFoot = playerInput.OnFoot;
 
         motor = GetComponent<PlayerMotor>();
+        PlayerShoot shooter = GetComponent<PlayerShoot>();
 
         onFoot.Jump.performed += ctx => motor.Jump();
+        onFoot.Shoot.performed += ctx => shooter.Fire();
     }
 
     void Update()
