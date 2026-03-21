@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 33a6a5952cb707f478ae5ba98cccf206
+guid: 4e15c5357a9f24291ad03612559544e9
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
-  fontSize: 150
+  fontSize: 16
   forceTextureCase: -2
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Determination
+  - Lexend
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
-  ascentCalculationMode: 0
+  ascentCalculationMode: 1
   useLegacyBoundsCalculation: 0
   shouldRoundAdvanceValue: 1
   userData: 
