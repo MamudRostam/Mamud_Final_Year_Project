@@ -16,7 +16,9 @@ public class PicoPointer : MonoBehaviour
 
     void Update()
     {
-      
+
+        if (Time.timeScale == 0f) return;
+
         float moveX = Input.GetAxis("Mouse X") * sensitivity;
         float moveY = Input.GetAxis("Mouse Y") * sensitivity;
 

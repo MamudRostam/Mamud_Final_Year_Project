@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 6085873795073422940}
   - component: {fileID: 6110130354856261258}
   - component: {fileID: 3093405041418059561}
-  - component: {fileID: 7510388933379544282}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -147,21 +146,6 @@ MonoBehaviour:
   deceleration: 25
   airControl: 0.4
   groundSnapForce: -8
---- !u!114 &7510388933379544282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2520091252297627428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6aaa66db0fecbb41a4a586f70a2663e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 3564397612523541752}
-  xSensitivty: 30
-  ySensitivity: 30
 --- !u!1 &3958637462315032399
 GameObject:
   m_ObjectHideFlags: 0

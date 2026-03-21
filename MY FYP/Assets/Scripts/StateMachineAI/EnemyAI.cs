@@ -1,7 +1,6 @@
 using Unity.Hierarchy;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -13,20 +12,15 @@ public class EnemyAI : MonoBehaviour
 
     public float health;
     
-    Animator animator;
 
-
-    //Patrolling
     public Vector3 walkPoint;
     bool walkPointSet;
     public float walkPointRange;
 
-    //Attacking
     public float timeBetweenAttacks;
     bool alreadyAttacked;
     public GameObject Projectile;
 
-    //States
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
@@ -34,21 +28,17 @@ public class EnemyAI : MonoBehaviour
     {
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
-        animator = GetComponent<Animator>();
 
     }
 
     private void Update()
     {
-        //check for sight and attack range
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
         if (!playerInSightRange && !playerInAttackRange) Patrolling();
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();
         if (playerInSightRange && playerInAttackRange) AttackPlayer();
-
-        animator.SetFloat("Speed", agent.remainingDistance > agent.stoppingDistance ? 1f : 0f);
 
     }
 
@@ -61,14 +51,12 @@ public class EnemyAI : MonoBehaviour
 
         Vector3 distanceToWalkPoint = transform.position - walkPoint;
 
-        //Walkpoint reahed
         if (distanceToWalkPoint.magnitude < 1f)
             walkPointSet = false;
     }
 
     private void SearchWalkPoint()
     {
-        //Calculate random point in rage
         float randomZ = Random.Range(-walkPointRange, walkPointRange);
         float randomX = Random.Range(-walkPointRange, walkPointRange);
 
@@ -86,21 +74,16 @@ public class EnemyAI : MonoBehaviour
 
     private void AttackPlayer()
     {
-        //Make sure enemy does move when attacking (can change later)
         agent.SetDestination(transform.position);
 
         transform.LookAt(player);
 
         if (!alreadyAttacked)
         {
-            //Attack code here for later
             Rigidbody rb = Instantiate(Projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
             
             rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
             rb.AddForce(transform.up * 8f, ForceMode.Impulse);
-
-
-            // 
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
