@@ -8,6 +8,9 @@ public class PlayerShoot : MonoBehaviour
 
     public void Fire()
     {
+
+        if(Time.timeScale == 0f) return;
+
         if (bulletPrefab == null || spawnPoint == null) return;
 
         GameObject bullet = Instantiate(bulletPrefab, spawnPoint.position, spawnPoint.rotation);
