@@ -493,7 +493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 143651811}
-  player: {fileID: 0}
+  player: {fileID: 218407406}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
@@ -1546,6 +1546,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2520091252297627428, guid: f199b22a913f20e469a47d846b729dc4, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2520091252297627428, guid: f199b22a913f20e469a47d846b729dc4, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -1670,6 +1674,11 @@ MonoBehaviour:
   chipSpeed: 2
   frontHealthBar: {fileID: 1817980291}
   backHealthBar: {fileID: 1585772173}
+--- !u!4 &218407406 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7070837662993733645, guid: f199b22a913f20e469a47d846b729dc4, type: 3}
+  m_PrefabInstance: {fileID: 218407400}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &224958541
 GameObject:
   m_ObjectHideFlags: 0
@@ -2415,7 +2424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 455219084}
-  player: {fileID: 0}
+  player: {fileID: 218407406}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
@@ -2827,7 +2836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 601428742}
-  player: {fileID: 0}
+  player: {fileID: 218407406}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
