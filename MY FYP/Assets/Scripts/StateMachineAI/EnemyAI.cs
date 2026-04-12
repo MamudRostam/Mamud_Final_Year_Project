@@ -1,4 +1,5 @@
 using Unity.Hierarchy;
+using Unity.VisualScripting.Dependencies.NCalc;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -20,6 +21,8 @@ public class EnemyAI : MonoBehaviour
     public float timeBetweenAttacks;
     bool alreadyAttacked;
     public GameObject Projectile;
+
+    public Transform firePoint;
 
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
@@ -80,14 +83,24 @@ public class EnemyAI : MonoBehaviour
 
         if (!alreadyAttacked)
         {
-            Rigidbody rb = Instantiate(Projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+
+            GameObject bullet = Instantiate(Projectile, firePoint.position, transform.rotation);
+
+            Physics.IgnoreCollision(bullet.GetComponent<Collider>(), GetComponent<Collider>());
             
-            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+            Rigidbody rb = bullet.GetComponent<Rigidbody>();
+
+            Vector3 targetPos = player.position + Vector3.up * 1f;
+            Vector3 attackDirection = (targetPos - firePoint.position).normalized;
+
+            rb.AddForce(attackDirection.normalized * 32f, ForceMode.Impulse);
+
+            Destroy(bullet, 3f);
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
+
     }
 
     private void ResetAttack()
