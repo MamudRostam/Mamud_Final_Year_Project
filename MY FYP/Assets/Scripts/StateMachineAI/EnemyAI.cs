@@ -1,7 +1,7 @@
-using Unity.Hierarchy;
-using Unity.VisualScripting.Dependencies.NCalc;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
+
 
 public class EnemyAI : MonoBehaviour
 {
@@ -27,10 +27,21 @@ public class EnemyAI : MonoBehaviour
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
+    public Image healthBar;
+    public GameObject healthBarCanvas;
+    public float maxHealth = 100f;
+
+    private GameManager gameManager;
+
     private void Awake()
     {
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+
+        health = maxHealth;
+        healthBarCanvas.SetActive(false);
+
+        gameManager = FindFirstObjectByType<GameManager>();
 
     }
 
@@ -42,6 +53,11 @@ public class EnemyAI : MonoBehaviour
         if (!playerInSightRange && !playerInAttackRange) Patrolling();
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();
         if (playerInSightRange && playerInAttackRange) AttackPlayer();
+        
+        if (healthBarCanvas.activeSelf)
+        {
+            healthBarCanvas.transform.LookAt(player);
+        }
 
     }
 
@@ -112,11 +128,16 @@ public class EnemyAI : MonoBehaviour
     {
         health -= damage;
 
+        healthBarCanvas.SetActive(true);
+
+        healthBar.fillAmount = health / maxHealth;
+
         if (health <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
     }
 
     private void DestroyEnemy()
     {
+        gameManager.EnemyKilled();
         Destroy(gameObject);
     }
 
