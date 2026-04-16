@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         enemiesAlive = GameObject.FindGameObjectsWithTag("Enemy").Length;
-        gameCompleteUI.SetActive(true);
+        gameCompleteUI.SetActive(false);
     }
 
     public void EnemyKilled()
@@ -25,5 +25,8 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0f;
         gameCompleteUI.SetActive(true);
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }
