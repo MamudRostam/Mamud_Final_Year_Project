@@ -31,6 +31,8 @@ public class EnemyAI : MonoBehaviour
     public GameObject healthBarCanvas;
     public float maxHealth = 100f;
 
+    private bool isDead = false;
+
     private GameManager gameManager;
 
     private void Awake()
@@ -126,13 +128,20 @@ public class EnemyAI : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        if (isDead) return;
+
         health -= damage;
-
         healthBarCanvas.SetActive(true);
-
         healthBar.fillAmount = health / maxHealth;
 
-        if (health <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
+        if (health <= 0)
+        {
+            isDead = true;
+            DestroyEnemy();
+        }
+
+
+
     }
 
     private void DestroyEnemy()
