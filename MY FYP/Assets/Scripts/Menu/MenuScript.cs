@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class MainMenuScript : MonoBehaviour
 {
 
-
+    public GameObject HowToPlayPanel;
     public GameObject selectionWindowPanel;
 
     public void StartGame()
@@ -12,6 +12,14 @@ public class MainMenuScript : MonoBehaviour
         if (selectionWindowPanel != null)
         {
             selectionWindowPanel.SetActive(true);
+        }
+    }
+
+    public void OpenHowToPlay()
+    {
+        if (HowToPlayPanel != null)
+        {
+            HowToPlayPanel.SetActive(true);
         }
     }
 
@@ -34,4 +42,13 @@ public class MainMenuScript : MonoBehaviour
     {
         selectionWindowPanel.SetActive(false);
     }
+
+    public void CloseHowToPlayPanel()
+    {
+        if (HowToPlayPanel != null)
+        {
+            HowToPlayPanel.SetActive(false);
+        }
+    }
+
 }
