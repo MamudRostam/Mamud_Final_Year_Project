@@ -3085,6 +3085,7 @@ GameObject:
   - component: {fileID: 2074360683}
   - component: {fileID: 2074360685}
   - component: {fileID: 2074360684}
+  - component: {fileID: 2074360686}
   m_Layer: 5
   m_Name: HowToPlayPanel
   m_TagString: Untagged
@@ -3151,6 +3152,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2074360682}
   m_CullTransparentMesh: 1
+--- !u!114 &2074360686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074360682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c3cc0ad921847d49b56d5b710d24c1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _radius: 10
+  _speed: 1
 --- !u!1 &2086971628
 GameObject:
   m_ObjectHideFlags: 0
