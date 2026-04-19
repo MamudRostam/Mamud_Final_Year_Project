@@ -12,7 +12,7 @@ public class EnemyAI : MonoBehaviour
     public LayerMask whatIsGround, whatIsPlayer;
 
     public float health;
-    
+
 
     public Vector3 walkPoint;
     bool walkPointSet;
@@ -55,7 +55,7 @@ public class EnemyAI : MonoBehaviour
         if (!playerInSightRange && !playerInAttackRange) Patrolling();
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();
         if (playerInSightRange && playerInAttackRange) AttackPlayer();
-        
+
         if (healthBarCanvas.activeSelf)
         {
             healthBarCanvas.transform.LookAt(player);
@@ -104,8 +104,8 @@ public class EnemyAI : MonoBehaviour
 
             GameObject bullet = Instantiate(Projectile, firePoint.position, transform.rotation);
 
-            Physics.IgnoreCollision(bullet.GetComponent<Collider>(), GetComponent<Collider>());
-            
+            Physics.IgnoreCollision(bullet.GetComponent<Collider>(), GetComponentInChildren<Collider>());
+
             Rigidbody rb = bullet.GetComponent<Rigidbody>();
 
             Vector3 targetPos = player.position + Vector3.up * 1f;
