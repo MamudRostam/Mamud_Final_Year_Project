@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour
     public float chipSpeed = 2f;
     public Image frontHealthBar;
     public Image backHealthBar;
+    public EnemyAI enemyAI;
 
 
     void Start()
@@ -19,6 +20,7 @@ public class PlayerHealth : MonoBehaviour
     {
         health = Mathf.Clamp(health, 0, maxHealth);
         UpdateHealthUI();
+
         if (Input.GetKeyDown(KeyCode.Z))
         {
             TakeDaamge(Random.Range(5, 10));
