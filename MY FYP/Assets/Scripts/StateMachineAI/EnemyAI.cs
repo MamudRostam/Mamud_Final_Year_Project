@@ -13,6 +13,7 @@ public class EnemyAI : MonoBehaviour
 
     public float health;
 
+    public PlayerHealth playerHealth;
 
     public Vector3 walkPoint;
     bool walkPointSet;
@@ -98,11 +99,11 @@ public class EnemyAI : MonoBehaviour
         agent.SetDestination(transform.position);
 
         transform.LookAt(player);
-
+        
         if (!alreadyAttacked)
         {
 
-            GameObject bullet = Instantiate(Projectile, firePoint.position, transform.rotation);
+            GameObject bullet = Instantiate(Projectile, firePoint.position, Quaternion.identity);
 
             Physics.IgnoreCollision(bullet.GetComponent<Collider>(), GetComponentInChildren<Collider>());
 
@@ -114,6 +115,7 @@ public class EnemyAI : MonoBehaviour
             rb.AddForce(attackDirection.normalized * 32f, ForceMode.Impulse);
 
             Destroy(bullet, 3f);
+
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);

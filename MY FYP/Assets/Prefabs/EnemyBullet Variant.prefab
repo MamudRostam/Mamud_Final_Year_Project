@@ -12,9 +12,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyBullet Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 384185844308953447, guid: 5be8249f07fe2f7488b286ff9132b764, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 1683374764827377712, guid: 5be8249f07fe2f7488b286ff9132b764, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.59551024
+      value: 0.17585418
       objectReference: {fileID: 0}
     - target: {fileID: 1683374764827377712, guid: 5be8249f07fe2f7488b286ff9132b764, type: 3}
       propertyPath: m_LocalScale.y
@@ -26,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1683374764827377712, guid: 5be8249f07fe2f7488b286ff9132b764, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 26.050888
+      value: 26.2607
       objectReference: {fileID: 0}
     - target: {fileID: 1683374764827377712, guid: 5be8249f07fe2f7488b286ff9132b764, type: 3}
       propertyPath: m_LocalPosition.y

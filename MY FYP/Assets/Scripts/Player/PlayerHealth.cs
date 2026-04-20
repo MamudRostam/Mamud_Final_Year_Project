@@ -68,6 +68,15 @@ public class PlayerHealth : MonoBehaviour
         health += healAmount;
         lerpTimer = 0f;
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer == 9)
+        {
+            TakeDaamge(9);
+            Destroy(other.gameObject);
+        }
+    }
 }
 
 
