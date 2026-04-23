@@ -10,6 +10,13 @@ public class PicoPointer : MonoBehaviour
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
+        Vector3 rot = transform.localRotation.eulerAngles;
+
+        rotX = rot.x > 180 ? rot.x - 360 : rot.x;
+        rotY = rot.y;
        
         Cursor.lockState = CursorLockMode.Locked;
     }

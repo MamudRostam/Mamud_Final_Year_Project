@@ -9,6 +9,8 @@ public class PlayerShoot : MonoBehaviour
     public void Fire()
     {
 
+        Audiomanager.instance.PlayPlayerShoot();
+
         if(Time.timeScale == 0f) return;
 
         if (bulletPrefab == null || spawnPoint == null) return;

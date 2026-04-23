@@ -9,7 +9,8 @@ public class PlayerHealth : MonoBehaviour
     public Image frontHealthBar;
     public Image backHealthBar;
     public EnemyAI enemyAI;
-
+    public GameObject gameOverPanel;
+    private bool isDead = false;
 
     void Start()
     {
@@ -59,8 +60,32 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDaamge(float damage)
     {
+
+        Audiomanager.instance.PlayPlayerHit();
+
+        if (isDead) return;
+
+
         health -= damage;
         lerpTimer = 0f;
+
+        if (health <= 0f)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        Audiomanager.instance.PlayGameOver();
+
+        isDead = true;
+
+        gameOverPanel.SetActive(true);
+        Time.timeScale = 0f;
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     public void RestoreHealth(float healAmount)

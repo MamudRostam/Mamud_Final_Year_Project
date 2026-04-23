@@ -7,6 +7,7 @@ public class MainGameCanvas : MonoBehaviour
 {
     public GameObject PauseButtonPanel;
     public GameObject Crosshair;
+    public GameObject OptionsPanel;
 
     private bool isPaused = false;
 
@@ -18,6 +19,8 @@ public class MainGameCanvas : MonoBehaviour
         Cursor.visible = false;
 
         Time.timeScale = 1f;
+
+        OptionsPanel.SetActive(false);
     }
 
     void Update()
@@ -62,7 +65,18 @@ public class MainGameCanvas : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
-    
+    public void OpenOptions()
+    {
+        PauseButtonPanel.SetActive(false);
+        OptionsPanel.SetActive(true);
+    }
+
+    public void CloseOptions()
+    {
+        PauseButtonPanel.SetActive(false);
+        OptionsPanel.SetActive(true);
+    }
+
 
 
 

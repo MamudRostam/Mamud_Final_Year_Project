@@ -96,6 +96,8 @@ public class EnemyAI : MonoBehaviour
 
     public void AttackPlayer()
     {
+        Audiomanager.instance.PlayEnemyShoot();
+
         agent.SetDestination(transform.position);
 
         transform.LookAt(player);
@@ -130,6 +132,8 @@ public class EnemyAI : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        Audiomanager.instance.PlayEnemyHit();
+
         if (isDead) return;
 
         health -= damage;
@@ -141,8 +145,6 @@ public class EnemyAI : MonoBehaviour
             isDead = true;
             DestroyEnemy();
         }
-
-
 
     }
 

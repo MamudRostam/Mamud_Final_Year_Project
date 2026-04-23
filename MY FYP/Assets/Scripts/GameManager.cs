@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
 
     void GameComplete()
     {
+        Audiomanager.instance.PlayGameComplete();
+
         Time.timeScale = 0f;
         gameCompleteUI.SetActive(true);
 
