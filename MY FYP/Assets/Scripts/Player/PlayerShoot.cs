@@ -8,12 +8,15 @@ public class PlayerShoot : MonoBehaviour
 
     public void Fire()
     {
-
-        Audiomanager.instance.PlayPlayerShoot();
-
-        if(Time.timeScale == 0f) return;
+       
+        if (Time.timeScale == 0f) return;
 
         if (bulletPrefab == null || spawnPoint == null) return;
+
+        if (Audiomanager.instance != null)
+        {
+            Audiomanager.instance.PlayPlayerShoot();
+        }
 
         GameObject bullet = Instantiate(bulletPrefab, spawnPoint.position, spawnPoint.rotation);
 
@@ -22,5 +25,7 @@ public class PlayerShoot : MonoBehaviour
         {
             rb.linearVelocity = spawnPoint.forward * bulletSpeed;
         }
+
+
     }
 }

@@ -4,6 +4,9 @@ public class MatchRoomAudio : MonoBehaviour
 {
     void Start()
     {
-        Audiomanager.instance.PlayGameMusic();
+        if (Audiomanager.instance != null)
+        {
+            Audiomanager.instance.PlayGameMusic();
+        }
     }
 }

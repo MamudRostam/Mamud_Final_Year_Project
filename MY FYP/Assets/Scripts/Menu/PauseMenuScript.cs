@@ -73,7 +73,7 @@ public class MainGameCanvas : MonoBehaviour
 
     public void CloseOptions()
     {
-        PauseButtonPanel.SetActive(false);
+        OptionsPanel.SetActive(false);
         OptionsPanel.SetActive(true);
     }
 
