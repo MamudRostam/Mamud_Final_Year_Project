@@ -8,6 +8,7 @@ public class MainGameCanvas : MonoBehaviour
     public GameObject PauseButtonPanel;
     public GameObject Crosshair;
     public GameObject OptionsPanel;
+    public bool isGameOver = false;
 
     private bool isPaused = false;
 
@@ -25,8 +26,16 @@ public class MainGameCanvas : MonoBehaviour
 
     void Update()
     {
+        if (isGameOver) return;
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            if (OptionsPanel.activeSelf)
+            {
+                CloseOptions();
+                return;
+            }
+           
             TogglePause();
         }
     }

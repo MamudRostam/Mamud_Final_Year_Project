@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class GameCompleteScript : MonoBehaviour
 {
+
     public void RestartGame()
     {
         Time.timeScale = 1f;
@@ -23,4 +24,5 @@ public class GameCompleteScript : MonoBehaviour
 
         SceneManager.LoadScene("MainMenu");
     }
+
 }

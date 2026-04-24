@@ -48,11 +48,6 @@ public class Audiomanager : MonoBehaviour
         }
     }
 
-     void Update()
-    {
-        musicSource.volume = masterVolume * musicVolume;
-        sfxSource.volume = masterVolume * sfxVolume;
-    }
 
     // Music
 
@@ -110,6 +105,12 @@ public class Audiomanager : MonoBehaviour
     public void PlayEnemyShoot()
     {
         sfxSource.PlayOneShot(enemyShoot);
+    }
+
+    public void ApplyVolume()
+    {
+        musicSource.volume = masterVolume * musicVolume;
+        sfxSource.volume = masterVolume * sfxVolume;
     }
 
 

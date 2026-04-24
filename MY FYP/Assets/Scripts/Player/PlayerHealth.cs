@@ -86,6 +86,12 @@ public class PlayerHealth : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+
+        var canvas = FindFirstObjectByType<MainGameCanvas>();
+        if (canvas != null)
+        {
+            canvas.isGameOver = true;
+        }
     }
 
     public void RestoreHealth(float healAmount)
