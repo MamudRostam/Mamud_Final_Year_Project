@@ -22,6 +22,8 @@ public class Audiomanager : MonoBehaviour
     [Header("Enemy")]
     public AudioClip enemyShoot;
     public AudioClip enemyHit;
+    public AudioSource hitSource;
+
 
     [Header("Game States")]
     public AudioClip gameOver;
@@ -112,6 +114,7 @@ public class Audiomanager : MonoBehaviour
         musicSource.volume = masterVolume * musicVolume;
         sfxSource.volume = masterVolume * sfxVolume;
     }
+
 
 
 

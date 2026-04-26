@@ -96,7 +96,6 @@ public class EnemyAI : MonoBehaviour
 
     public void AttackPlayer()
     {
-        Audiomanager.instance.PlayEnemyShoot();
 
         agent.SetDestination(transform.position);
 
@@ -104,6 +103,10 @@ public class EnemyAI : MonoBehaviour
         
         if (!alreadyAttacked)
         {
+            if (Audiomanager.instance != null)
+            {
+                Audiomanager.instance.PlayEnemyShoot();
+            }
 
             GameObject bullet = Instantiate(Projectile, firePoint.position, Quaternion.identity);
 
