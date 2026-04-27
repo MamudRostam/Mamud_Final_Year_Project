@@ -6,6 +6,8 @@ public class MainMenuScript : MonoBehaviour
 
     public GameObject HowToPlayPanel;
     public GameObject selectionWindowPanel;
+    public GameObject CreditsPanel;
+
 
     public void StartGame()
     {
@@ -51,4 +53,20 @@ public class MainMenuScript : MonoBehaviour
         }
     }
 
+    public void OpenCreditsPanel()
+    {
+        if (CreditsPanel != null)
+        {
+            CreditsPanel.SetActive(true);
+        }
+    }
+
+
+    public void CloseCreditsPanel()
+    {
+        if (CreditsPanel != null)
+        {
+            CreditsPanel.SetActive(false);
+        }
+    }
 }
