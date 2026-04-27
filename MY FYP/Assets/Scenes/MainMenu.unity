@@ -3724,7 +3724,6 @@ MonoBehaviour:
   playerHit: {fileID: 8300000, guid: 7e8fcbeefbfcac1469a69cb47af14030, type: 3}
   enemyShoot: {fileID: 8300000, guid: a97c2b36e15629a4ba60bda55b7eed46, type: 3}
   enemyHit: {fileID: 8300000, guid: d55241bf8099ea04a9bf5fcbee005263, type: 3}
-  hitSource: {fileID: 1290138042}
   gameOver: {fileID: 8300000, guid: e5731e6ed474ce5429b4027ae26ecd47, type: 3}
   gameComplete: {fileID: 8300000, guid: 18fb61e3885dd494abae69f0d7a94d7b, type: 3}
   masterVolume: 1
@@ -6238,8 +6237,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 339, y: -21}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 426.1579, y: -21}
+  m_SizeDelta: {x: 60.008, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1969664977
 MonoBehaviour:
@@ -6261,7 +6260,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: b29bd09a1c55f4a45b33761b5bc8a56a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6388,8 +6387,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -339, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -410.22583, y: 0}
+  m_SizeDelta: {x: 67.319, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1978609946
 MonoBehaviour:
@@ -6411,7 +6410,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: c808e4cdbef9c1d4e8b39ef562ed7564, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

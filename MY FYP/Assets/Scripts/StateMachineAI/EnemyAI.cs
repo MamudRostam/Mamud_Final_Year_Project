@@ -46,6 +46,8 @@ public class EnemyAI : MonoBehaviour
 
         gameManager = FindFirstObjectByType<GameManager>();
 
+        playerHealth = FindFirstObjectByType<PlayerHealth>();
+
     }
 
     private void Update()

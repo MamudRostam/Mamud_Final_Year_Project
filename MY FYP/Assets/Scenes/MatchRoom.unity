@@ -377,7 +377,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 89847858}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -510,7 +510,7 @@ GameObject:
   - component: {fileID: 143651806}
   - component: {fileID: 143651811}
   - component: {fileID: 143651810}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyAI2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -556,19 +556,19 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   health: 100
-  playerHealth: {fileID: 0}
+  playerHealth: {fileID: 218407405}
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
   timeBetweenAttacks: 0.5
   Projectile: {fileID: 4803945522473858098, guid: 638f98e22bb0ad444919638aedac9b8c, type: 3}
   firePoint: {fileID: 744109227}
-  sightRange: 20
-  attackRange: 12
+  sightRange: 30
+  attackRange: 20
   playerInSightRange: 0
   playerInAttackRange: 0
   healthBar: {fileID: 1116993703}
   healthBarCanvas: {fileID: 1690469467}
-  maxHealth: 100
+  maxHealth: 150
 --- !u!195 &143651811
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1067,7 +1067,7 @@ GameObject:
   - component: {fileID: 244139690}
   - component: {fileID: 244139692}
   - component: {fileID: 244139691}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BackgroundImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2656,7 +2656,7 @@ GameObject:
   - component: {fileID: 455219079}
   - component: {fileID: 455219084}
   - component: {fileID: 455219083}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyAI3
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -2702,19 +2702,19 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   health: 100
-  playerHealth: {fileID: 0}
+  playerHealth: {fileID: 218407405}
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
   timeBetweenAttacks: 0.5
   Projectile: {fileID: 4803945522473858098, guid: 638f98e22bb0ad444919638aedac9b8c, type: 3}
   firePoint: {fileID: 89847858}
-  sightRange: 20
-  attackRange: 12
+  sightRange: 30
+  attackRange: 20
   playerInSightRange: 0
   playerInAttackRange: 0
   healthBar: {fileID: 1979135164}
   healthBarCanvas: {fileID: 1633212114}
-  maxHealth: 100
+  maxHealth: 150
 --- !u!195 &455219084
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3244,7 +3244,7 @@ GameObject:
   - component: {fileID: 601428741}
   - component: {fileID: 601428742}
   - component: {fileID: 601428746}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyAI1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -3312,19 +3312,19 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   health: 100
-  playerHealth: {fileID: 0}
+  playerHealth: {fileID: 218407405}
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
   timeBetweenAttacks: 0.5
   Projectile: {fileID: 4803945522473858098, guid: 638f98e22bb0ad444919638aedac9b8c, type: 3}
   firePoint: {fileID: 1882238113}
-  sightRange: 20
-  attackRange: 12
+  sightRange: 30
+  attackRange: 20
   playerInSightRange: 0
   playerInAttackRange: 0
   healthBar: {fileID: 1342347508}
   healthBarCanvas: {fileID: 1563298225}
-  maxHealth: 100
+  maxHealth: 150
 --- !u!1 &611758350
 GameObject:
   m_ObjectHideFlags: 0
@@ -3336,7 +3336,7 @@ GameObject:
   - component: {fileID: 611758351}
   - component: {fileID: 611758353}
   - component: {fileID: 611758352}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BackgroundImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3920,7 +3920,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 744109227}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4935,7 +4935,7 @@ GameObject:
   - component: {fileID: 1116993702}
   - component: {fileID: 1116993704}
   - component: {fileID: 1116993703}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FillImage(HealthBar)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5904,7 +5904,7 @@ GameObject:
   - component: {fileID: 1342347507}
   - component: {fileID: 1342347509}
   - component: {fileID: 1342347508}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FillImage(HealthBar)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5979,7 +5979,7 @@ GameObject:
   - component: {fileID: 1356287558}
   - component: {fileID: 1356287560}
   - component: {fileID: 1356287559}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BackgroundImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7170,7 +7170,7 @@ GameObject:
   - component: {fileID: 1563298229}
   - component: {fileID: 1563298228}
   - component: {fileID: 1563298227}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: EnemyHealthBarCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7572,7 +7572,7 @@ GameObject:
   - component: {fileID: 1633212118}
   - component: {fileID: 1633212117}
   - component: {fileID: 1633212116}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: EnemyHealthBarCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7786,7 +7786,7 @@ GameObject:
   - component: {fileID: 1690469471}
   - component: {fileID: 1690469470}
   - component: {fileID: 1690469469}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: EnemyHealthBarCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8369,7 +8369,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1882238113}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8811,7 +8811,7 @@ GameObject:
   - component: {fileID: 1979135163}
   - component: {fileID: 1979135165}
   - component: {fileID: 1979135164}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FillImage(HealthBar)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

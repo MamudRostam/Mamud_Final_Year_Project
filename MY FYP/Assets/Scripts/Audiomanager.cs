@@ -22,7 +22,6 @@ public class Audiomanager : MonoBehaviour
     [Header("Enemy")]
     public AudioClip enemyShoot;
     public AudioClip enemyHit;
-    public AudioSource hitSource;
 
 
     [Header("Game States")]
@@ -35,6 +34,11 @@ public class Audiomanager : MonoBehaviour
     [Range(0, 1)] public float musicVolume = 1f;
     [Range(0, 1)] public float sfxVolume = 1f;
 
+
+    void Start()
+    {
+        ApplyVolume();
+    }
 
     void Awake()
     {
@@ -76,6 +80,7 @@ public class Audiomanager : MonoBehaviour
 
     public void PlayButton()
     {
+        if (sfxSource == null) return;
         sfxSource.PlayOneShot(buttonClick);
     }
 
