@@ -1,1 +1,4 @@
 Remote Style like the wii remote
+Joystick
+Glove Controller
+Arcade Gun style controller
