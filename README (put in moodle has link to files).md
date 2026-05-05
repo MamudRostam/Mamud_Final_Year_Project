@@ -1,5 +1,10 @@
 # Mamud_Final_Year_Project (CMP6200 Individual Honours Project A AYR 2025/6)
 
+# Project Links to FYP
+Link to my Project Files - https://mailbcuac-my.sharepoint.com/:f:/g/personal/zorik_rostam_mail_bcu_ac_uk/IgCu5VOiXzOGSZj45zbbl2PzAacOtC27Pxqy2nPTrNrGDC8?e=GrvPP9
+
+
+
 # Introduction
 This project explores new forms of game interaction by developing a custom controller that will support motion control using MPU6050 for capturing motion control and Pi Pico WH. Instead of relying on traditional keyboard or joystick inputs, the controller uses motion sensing technology to aim within a shooter game environment, while physical buttons enable actions such as shooting. 
 
